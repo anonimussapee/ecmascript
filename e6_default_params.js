@@ -116,4 +116,16 @@ let calc=new calcular();
 console.log(calc.suma(12,3));
 //ahora  los modulos se los importa de esta manera y funcionan en los archivos html
 // import {imprimir} from "./modulos.js";
-
+ 
+// bueno ahora los generadores
+function* generador(){
+if(true){
+    yield("hola");
+}
+if(true){
+    yield("mundo");
+}
+}
+let genera=generador();
+console.log(genera.next().value);
+console.log(genera.next().value);
