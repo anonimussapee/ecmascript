@@ -49,7 +49,21 @@ var {nombre,edad,lenguaje}=john_1;
 console.log(`${nombre} tiene ${edad} años y programa en lenguaje ${lenguaje}`);
 
 //tambien se agrego el operador de propagación, spread operator, antes no se podia tan facil, y se hacia con otros prototipos de concatenacion, pero ahora ya es mucho mejor
-var team1=["john","elon","bill"];
+var team1=["john","elon","bill","ryan"];
 var team2=["steve","nikola","wosniak"];
 var all_team=[...team1,...team2];
 console.log(all_team);
+
+//ademas se añadio let que nos sirve para guardar valores como var solo que esta solo es accesible desde su scope
+{var globlalvar="es global var";};
+{let globallet="es global let";
+console.log(globallet);//solo es accesible desde su scope local
+};
+console.log(globlalvar);//es accesible desde cualquier scope globla,local
+
+//tambien se añadio const para las constantes es decir no pueden cambiar
+const uno=1;
+//uno=uno+uno; no cambia su valor y se mantiene
+console.log(uno);
+
+ 
