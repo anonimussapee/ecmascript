@@ -66,4 +66,21 @@ const uno=1;
 //uno=uno+uno; no cambia su valor y se mantiene
 console.log(uno);
 
- 
+//ademas se actalizo la asignacion de parametros en objetos
+//antes lo haciamos asi
+let nombre="john";
+let apellido="cordova";
+let obj1={nombre:nombre,apellido:apellido};
+console.log(obj1);
+//y ahora en e6 lo asignamos asi
+let obj2={nombre,apellido};
+console.log(obj2);
+
+//ademas se añadieron arrows functions o funciones de flecha
+//antes lo haciamos asi
+let nombres=[{nombre:"john",apellido:"cordova"},{nombre:"malku",apellido:"sinchico"}];
+let solo_nombres=nombres.map(function(item){return item.nombre});
+console.log(solo_nombres);
+//ahora en la version e6 es mas amigable
+let solo_nombres_2=nombres.map(item=>item.nombre);
+console.log(solo_nombres_2);
