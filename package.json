@@ -1,14 +1,20 @@
 {
   "name": "emascript",
   "version": "1.0.0",
-  "description": "",
+  "description": "nuevamente en la clase ecmascript",
   "main": "e6.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
-    
-  
+  "author": "john",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anonimussapee/ecmascript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anonimussapee/ecmascript/issues"
+  },
+  "homepage": "https://github.com/anonimussapee/ecmascript#readme"
 }
