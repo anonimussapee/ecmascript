@@ -1,4 +1,4 @@
-function imprimir(nombre,edad,ciudad){
+function imprimirlo(nombre,edad,ciudad){
     var nombre= nombre ||"john";
     var edad=edad||23;
     var ciudad=ciudad||"otavalo";
@@ -68,12 +68,12 @@ console.log(uno);
 
 //ademas se actalizo la asignacion de parametros en objetos
 //antes lo haciamos asi
-let nombre="john";
+let name="john";
 let apellido="cordova";
-let obj1={nombre:nombre,apellido:apellido};
+let obj1={nombre:name,apellido:apellido};
 console.log(obj1);
 //y ahora en e6 lo asignamos asi
-let obj2={nombre,apellido};
+let obj2={name,apellido};
 console.log(obj2);
 
 //ademas se añadieron arrows functions o funciones de flecha
@@ -99,3 +99,21 @@ return new Promise((y,n)=>{
 });
 };
 promesa().then(y=>console.log(y)).catch(error=>console.log(error));
+
+//ahora las clases
+class calcular{
+    constructor(){
+        this.value1=0;
+        this.value2=0;
+    }
+    suma(value1,value2){
+        this.value1=value1;
+        this.value2=value2;
+        return this.value1+this.value2;
+    }
+}
+let calc=new calcular();
+console.log(calc.suma(12,3));
+//ahora  los modulos se los importa de esta manera y funcionan en los archivos html
+// import {imprimir} from "./modulos.js";
+
