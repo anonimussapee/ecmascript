@@ -31,3 +31,25 @@ console.log(frase_larga);
 var frase_larga_2=`hola bizcocha me pelas el python y todos los lenguajes de programación
 ademas me vale python tu vida y espero que el ariel izama se haga cargo de todos los wawas que tengas`;
 console.log(frase_larga_2);
+
+//ahora tenemos desestructuracion que nos ayuda a encontrar y presentar el contenido de un objeto, antes lo haciamos asi, 
+var john={
+    nombre:"john malku",
+    edad:23,
+    lenguaje:"javascript"
+};
+console.log(john.nombre+" programa en lenguaje "+john.lenguaje);
+//ahora lo hacemos de esta manera con la desestructuracion 
+var john_1={
+    nombre:"john malku",
+    edad:23,
+    lenguaje:"javascript"
+};
+var {nombre,edad,lenguaje}=john_1;
+console.log(`${nombre} tiene ${edad} años y programa en lenguaje ${lenguaje}`);
+
+//tambien se agrego el operador de propagación, spread operator, antes no se podia tan facil, y se hacia con otros prototipos de concatenacion, pero ahora ya es mucho mejor
+var team1=["john","elon","bill"];
+var team2=["steve","nikola","wosniak"];
+var all_team=[...team1,...team2];
+console.log(all_team);
