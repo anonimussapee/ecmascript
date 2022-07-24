@@ -81,6 +81,21 @@ console.log(obj2);
 let nombres=[{nombre:"john",apellido:"cordova"},{nombre:"malku",apellido:"sinchico"}];
 let solo_nombres=nombres.map(function(item){return item.nombre});
 console.log(solo_nombres);
-//ahora en la version e6 es mas amigable
+//ahora en la version e6 es mas amigable y se puede hacer de todo como con las funciones declaraytivas y de expresión
 let solo_nombres_2=nombres.map(item=>item.nombre);
 console.log(solo_nombres_2);
+let datos=(nombre,apellido)=>{console.log(`hola ${nombre} de apellido ${apellido}`)};
+datos("john","cordova");
+
+//se añadio las promesas para resolver el asincronismo ya que javascript no es un lenguaje sincronico y antes tenia un problema con los callbacks
+let promesa=()=>{
+return new Promise((y,n)=>{
+    var o=false;
+    if(o===true){
+        y("se logro realizar la promesa");
+    }else{
+        n("UPS! Error al realizar la promesa");
+    }
+});
+};
+promesa().then(y=>console.log(y)).catch(error=>console.log(error));
