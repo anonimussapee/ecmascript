@@ -20,3 +20,35 @@ let equipo_2={
     second_name:"cordova",
 }
 //ahora van a mirar que admite coma al final del diccionario para que no tenga problemas
+
+//ahora vamos con el async y await que hacen lo mismo ejectar asincronismo pero de formas distintas
+
+const imprime=()=>{
+    return new Promise((y,n)=>{
+        if(true){
+            y("async realizado");
+        }else{
+            n("UPS! hubo un error no se realizo");
+        }
+    });
+}
+const pedido=async()=>{
+    const peticion=await imprime();
+     console.log(peticion)
+}
+pedido()
+//ahora con try catch y settimeout, new Error
+const promesa=()=>{
+    return new Promise((y,n)=>{
+        (false) ? setTimeout(()=>y("ya esta listo"),2000):n(new Error("UPS hubo un error"));
+    });
+}
+const pedido_2=async()=>{
+    try {
+        const realizado=await promesa();
+        console.log(realizado);
+    } catch (error) {
+        console.log(error);
+    }
+}
+pedido_2();
